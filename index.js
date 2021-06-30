@@ -2,8 +2,6 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-
-//Reminder to install node modules (npm init -y) &  inquirer(npm i inquirer --save) 
 const inquirer = require("inquirer");
 const path = require("path");
 
@@ -138,7 +136,7 @@ const createHTMLFile = (htmlPage) => {
     });
 }
 
-//call the manager first, then Engineer or Intern
+//calls manager first, then Engineer or Intern
 managerPrompt().then(() => {
     return employeePrompt();
 }).then(() => {

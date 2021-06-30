@@ -25,22 +25,22 @@ const managerPrompt = () => {
             .prompt([
                 {
                     type: "input",
-                    message: `What is the manager's name?`,
+                    message: `manager's name?`,
                     name: "name",
                 },
                 {
                     type: "input",
-                    message: "What is the manager's id?",
+                    message: "manager's id?",
                     name: "id",
                 },
                 {
                     type: "input",
-                    message: "What is the manager's email?",
+                    message: "manager's email?",
                     name: "email",
                 },
                 {
                     type: "input",
-                    message: "What is the manager's office number?",
+                    message: "manager's office number?",
                     name: "officeNumber",
                 },
             ]).then(answers => {
@@ -56,7 +56,7 @@ const employeePrompt = () => {
         inquirer.prompt([
             {
                 type: "list",
-                message: "Use arrow keys to select the next type of employee to enter:",
+                message: "select using arrow keys for employee type:",
                 name: "employeeType",
                 choices: [
                     "Engineer",
@@ -68,37 +68,37 @@ const employeePrompt = () => {
                 ]
             },
             {
-                message: "What is the engineer's name?",
+                message: "engineer's name?",
                 name: "name",
                 when: ({ employeeType }) => employeeType === "Engineer"
             },
             {
-                message: "What is the intern's name?",
+                message: "intern's name?",
                 name: "name",
                 when: ({ employeeType }) => employeeType === "Intern"
             },
             {
-                message: "What is the engineer's ID?",
+                message: "engineer's ID?",
                 name: "id",
                 when: ({ employeeType }) => employeeType === "Engineer"
             },
             {
-                message: "What is the intern's ID?",
+                message: "intern's ID?",
                 name: "id",
                 when: ({ employeeType }) => employeeType === "Intern"
             },
             {
-                message: "What is the engineer's email address?",
+                message: "engineer's email address?",
                 name: "email",
                 when: ({ employeeType }) => employeeType === "Engineer"
             },
             {
-                message: "What is the intern's email address?",
+                message: "intern's email address?",
                 name: "email",
                 when: ({ employeeType }) => employeeType === "Intern"
             },
             {
-                message: "what is the engineer's GitHub username?",
+                message: "engineer's GitHub username?",
                 name: "github",
                 when: ({ employeeType }) => employeeType === "Engineer"
             },
